@@ -9,7 +9,9 @@ import com.liferay.journal.service.JournalArticleLocalServiceUtil
 import com.liferay.portal.kernel.util.PortalUtil
 import com.liferay.portal.kernel.service.ServiceContext
 
-WEBCONTENTS_TO_CREATE = 30000 // set how many web contents you would like to make
+WEBCONTENTS_TO_CREATE = 10 // set how many web contents you would like to make
+WEBCONTENTS_STR_ID = 44101 // set the structure id
+WEBCONTENTS_TEMPLATE_KEY = "BASIC-WEB-CONTENT" // set the ddm template key
 
 def serviceContext = new ServiceContext()
 def defaultCompanyId = PortalUtil.getDefaultCompanyId()
@@ -47,8 +49,8 @@ descriptionMap.put(new Locale("en", "US"), "Test Web Content Description")
     <dynamic-content language-id="en_US"><![CDATA[]]></dynamic-content>
     </dynamic-element>
     </root>""",
-            43501, //change the structure id
-            "BASIC-WEB-CONTENT",
+            WEBCONTENTS_STR_ID,
+            WEBCONTENTS_TEMPLATE_KEY,
             serviceContext
     )
 }
