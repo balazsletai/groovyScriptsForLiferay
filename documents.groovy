@@ -1,3 +1,5 @@
+// This script will gather some information about the assest in the document library. e.g. name, size, type, age, modification date, uploader etc.
+
 import com.liferay.document.library.kernel.service.DLFileEntryLocalServiceUtil
 import com.liferay.document.library.kernel.service.DLFileEntryTypeLocalServiceUtil
 import com.liferay.document.library.kernel.model.DLFileEntry
