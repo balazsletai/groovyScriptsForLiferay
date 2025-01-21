@@ -1,6 +1,6 @@
 // This script can create a given number of web contents in Liferay 7.3
 // Set how many web content you would like with WEBCONTENTS_TO_CREATE
-// Set the structure id with WEBCONTENTS_STR_ID
+// Set the structure key with WEBCONTENTS_STR_KEY
 // Set the ddm template key with WEBCONTENTS_TEMPLATE_KEY
 
 import com.liferay.portal.kernel.service.UserLocalServiceUtil
@@ -12,7 +12,7 @@ import com.liferay.portal.kernel.service.ServiceContext
 
 // set how many web contents you would like to make
 WEBCONTENTS_TO_CREATE = 10
-// set the structure id (for basic web content it is BASIC-WEB-CONTENT)
+// set the structure key (for basic web content it is BASIC-WEB-CONTENT)
 WEBCONTENTS_STR_KEY = 37951
 // set the ddm template key (for basic web content it is BASIC-WEB-CONTENT)
 WEBCONTENTS_TEMPLATE_KEY = 37960
