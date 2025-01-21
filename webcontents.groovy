@@ -1,4 +1,4 @@
-// This script can create a given number of web contents in Liferay 7.4
+// This script can create a given number of web contents in Liferay 7.3
 // Set how many web content you would like with WEBCONTENTS_TO_CREATE
 // Set the structure id with WEBCONTENTS_STR_ID
 // Set the ddm template key with WEBCONTENTS_TEMPLATE_KEY
@@ -10,9 +10,12 @@ import com.liferay.journal.service.JournalArticleLocalServiceUtil
 import com.liferay.portal.kernel.util.PortalUtil
 import com.liferay.portal.kernel.service.ServiceContext
 
-WEBCONTENTS_TO_CREATE = 10 // set how many web contents you would like to make
-WEBCONTENTS_STR_ID = 44101 // set the structure id
-WEBCONTENTS_TEMPLATE_KEY = "BASIC-WEB-CONTENT" // set the ddm template key
+// set how many web contents you would like to make
+WEBCONTENTS_TO_CREATE = 10
+// set the structure id (for basic web content it is BASIC-WEB-CONTENT)
+WEBCONTENTS_STR_KEY = 37951
+// set the ddm template key (for basic web content it is BASIC-WEB-CONTENT)
+WEBCONTENTS_TEMPLATE_KEY = 37960
 
 def serviceContext = new ServiceContext()
 def defaultCompanyId = PortalUtil.getDefaultCompanyId()
@@ -35,10 +38,10 @@ println("Used Group Id: " + groupId)
 def titleMap = new HashMap<Locale,String>()
 titleMap.put(new Locale("en", "US"), "Test Web Content")
 def descriptionMap = new HashMap<Locale,String>()
+
 descriptionMap.put(new Locale("en", "US"), "Test Web Content Description")
 (1..WEBCONTENTS_TO_CREATE).each {
     def journalArticle = JournalArticleLocalServiceUtil.addArticle(
-            "",
             defaultUser.getUserId(),
             groupId,
             0,
@@ -50,8 +53,8 @@ descriptionMap.put(new Locale("en", "US"), "Test Web Content Description")
     <dynamic-content language-id="en_US"><![CDATA[]]></dynamic-content>
     </dynamic-element>
     </root>""",
-            WEBCONTENTS_STR_ID,
-            WEBCONTENTS_TEMPLATE_KEY,
+            WEBCONTENTS_STR_KEY.toString(),
+            WEBCONTENTS_TEMPLATE_KEY.toString(),
             serviceContext
     )
 }
