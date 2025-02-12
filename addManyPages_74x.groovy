@@ -13,7 +13,7 @@ import com.liferay.portal.util.PropsValues;
 // Set the numPages to the desired number of pages below
 // Run the script from Control Panel > Server administration > Script tab
 
-int numPages = 10000;
+int numPages = 10;
 String siteName = "test";
 
 try {
@@ -39,7 +39,7 @@ try {
 
     for (int i = 1; i <= numPages; i++) {
         layout = LayoutLocalServiceUtil.addLayout(
-            userId, groupId, false, 0, nameBase + i, title,
+            null, userId, groupId, false, 0, nameBase + i, title,
             description, LayoutConstants.TYPE_PORTLET, false, friendlyURL,
             serviceContext);
 
