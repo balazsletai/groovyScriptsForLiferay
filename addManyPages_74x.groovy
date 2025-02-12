@@ -9,6 +9,8 @@ import com.liferay.portal.kernel.service.ServiceContextFactory;
 import com.liferay.petra.string.StringPool;
 import com.liferay.portal.util.PropsValues;
 
+// NOTE: you may need the previous version depending on which Liferay 7.4 or Quarterly you have,
+// check the commit history.
 // Create a site named as you set for siteName below
 // Set the numPages to the desired number of pages below
 // Run the script from Control Panel > Server administration > Script tab
