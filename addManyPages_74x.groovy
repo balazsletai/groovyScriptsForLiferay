@@ -51,6 +51,7 @@ try {
         LayoutLocalServiceUtil.updateLayout(
             groupId, false, layout.getLayoutId(),
             layout.getTypeSettings());
+        println("page " + i + " is created.")
     }
 
     println(numPages + " pages were added to the " + siteName + " site.");
